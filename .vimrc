@@ -73,8 +73,6 @@ autocmd BufReadPost *
 
 " ================================
 " vim-plug
-" need to run this for the first time:
-" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 " ================================
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
@@ -103,7 +101,7 @@ let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 
 " FZF
-let g:fzf_command_prefix = 'Fz'
+let g:fzf_command_prefix = 'F'
 let g:fzf_buffers_jump = 1
 
 " easy motion
@@ -113,31 +111,35 @@ let g:EasyMotion_smartcase = 1
 " ================================
 " Key Bindings
 " ================================
+func Memo()
+  " Memo for various features and key bindings
+  echo "== Memo =="
+  echo "vim-surround: ds, cs, ys, di"
+  echo "vim-commentary: gc"
+  echo "source current file: :so %"
+endfunc
+
 let g:mapleader = ','
-let g:maplocalleader = ' '
 
 " insert mode
-inoremap jk <Right><Esc>
+inoremap jk <Esc>
 
 " normal mode
+nnoremap <leader> <Nop>
 nnoremap ; :
 nmap s <Plug>(easymotion-s)
-nmap <leader>bd :bd<CR>
 nmap <leader>cd :cd %:p:h<CR>:pwd<CR>
-nmap <leader>nb :NERDTreeFromBookmark
-nmap <leader>nf :NERDTreeFind<CR>
-nmap <leader>nn :NERDTreeToggle<CR>
+nmap <leader>q :close<CR>
+nmap <leader>fk <Plug>(fzf-maps-n)
+xmap <leader>fk <Plug>(fzf-maps-x)
+omap <leader>fk <Plug>(fzf-maps-o)
+nmap <leader>fb :FBuffers<CR>
+nmap <leader>fw :FWindows<CR>
+nmap <leader>fm :NERDTreeFromBookmark<Space>
+nmap <leader>ft :NERDTreeToggle<CR>
+nmap <leader>fv :e $MYVIMRC<CR>
 nmap <leader>tp :setlocal paste!<CR>
 nmap <leader>ts :setlocal spell! spelllang=en_us<CR>
-nmap <leader>ve :e $MYVIMRC<CR>
-nmap <leader>vs :so $MYVIMRC<CR>
-
-nmap <localleader><left> :bp<CR>
-nmap <localleader><right> :bn<CR>
-nmap <localleader>h <C-w>h
-nmap <localleader>j <C-w>j
-nmap <localleader>k <C-w>k
-nmap <localleader>l <C-w>l
 
 " command mode
 cnoremap <C-a> <Home>
@@ -145,10 +147,5 @@ cnoremap <C-e> <End>
 cnoremap <C-k> <C-u>
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
-
-" FZF mappings
-nmap <leader><Tab> <Plug>(fzf-maps-n)
-xmap <leader><Tab> <Plug>(fzf-maps-x)
-omap <leader><Tab> <Plug>(fzf-maps-o)
 
 

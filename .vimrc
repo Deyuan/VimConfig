@@ -82,7 +82,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'terryma/vim-expand-region'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
@@ -111,41 +110,25 @@ let g:EasyMotion_smartcase = 1
 " ================================
 " Key Bindings
 " ================================
-func Memo()
-  " Memo for various features and key bindings
-  echo "== Memo =="
-  echo "vim-surround: ds, cs, ys, di"
-  echo "vim-commentary: gc"
-  echo "source current file: :so %"
-endfunc
-
 let g:mapleader = ','
-
-" insert mode
 inoremap jk <Esc>
-
-" normal mode
-nnoremap <leader> <Nop>
 nnoremap ; :
 nmap s <Plug>(easymotion-s)
+nmap <Space> <Plug>(easymotion-overwin-line)
+nnoremap <leader> <Nop>
 nmap <leader>cd :cd %:p:h<CR>:pwd<CR>
-nmap <leader>q :close<CR>
+nmap <leader>fb :FBuffers<CR>
+nmap <leader>fc :FCommands<CR>
+nmap <leader>ff :FFiles<CR>
+nmap <leader>fw :FWindows<CR>
 nmap <leader>fk <Plug>(fzf-maps-n)
 xmap <leader>fk <Plug>(fzf-maps-x)
 omap <leader>fk <Plug>(fzf-maps-o)
-nmap <leader>fb :FBuffers<CR>
-nmap <leader>fw :FWindows<CR>
 nmap <leader>fm :NERDTreeFromBookmark<Space>
 nmap <leader>ft :NERDTreeToggle<CR>
 nmap <leader>fv :e $MYVIMRC<CR>
+nmap <leader>q :close<CR>
 nmap <leader>tp :setlocal paste!<CR>
 nmap <leader>ts :setlocal spell! spelllang=en_us<CR>
-
-" command mode
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
-cnoremap <C-k> <C-u>
-cnoremap <C-p> <Up>
-cnoremap <C-n> <Down>
 
 

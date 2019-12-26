@@ -2,7 +2,7 @@
 
 ## Vim Installation
 * About vim binary
-  * Check installed vim features with `vim --version`. Some plugins may depend on vim features such as `+conceal`, `+python`, `+lua`
+  * Check installed vim features with `vim --version`. Some plugins may depend on 8.0+ version and vim features such as `+conceal`, `+python`, `+lua`
   * https://www.vim.org/download.php
 
 ## Vim Plugin Management

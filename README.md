@@ -40,7 +40,7 @@
 | `C-w H`/`J`/`K`/`L` | window | move window and change horizontal/vertical split |
 | `C-w =` | window | adjust window size equally |
 | `C-w +`/`-`/`<`/`>`, `:res`, `:vert res` | window | adjust window size |
-| `C-w _/\|` | window | adjust current window to maximum height/width |
+| `C-w _`/`\|` | window | adjust current window to maximum height/width |
 | `:close` | window | close window |
 | `:bn`, `:bp` | buffer | next/previous buffer |
 | `:bd` | buffer | close buffer |

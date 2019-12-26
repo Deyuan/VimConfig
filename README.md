@@ -33,18 +33,20 @@
 ### Builtin
 
 | Keys or Command | Category | Function |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | h/j/k/l | move | move left/down/up/right |
 | C-w H/J/K/L | window | move window and change horizontal/vertical split |
-| q\<letter\> ... q ... @\<letter\> || record to a register then replay |
 | :help \<topic\> || help |
 | :bd | buffer | close buffer |
-| :so % || source current buffer |
+| q\<letter\> ... q ... @\<letter\> | misc | record to a register then replay |
+| :so % | misc | source current buffer |
+| :term | misc | open a terminal |
+| C-\\N | misc | change a terminal to normal mode |
 
 ### From Plugins
 
 | Keys or Command | Category | Function |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | ds\<char\> | vim-surround | delete surrounding char |
 | cs\<char\>\<surround\> | vim-surround | change surrounding char |
 | ys\<text-object\>\<surround\> | vim-surround | add surrounding to a text object |
